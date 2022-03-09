@@ -47,36 +47,56 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
 </head>
 
 <body>
+    <nav>
+        <div class="navbar">
+            <ul class="styleul">
+                <li><a href="index.php">Home </a></li>
+                <li><a href="about.php">About </a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="createAcc.php">Account</a></li>
+                <li><a href="vieworder.php">View Order</a></li>
+                <li><a href="singleOrder.php">Single Order</a></li>
+                <li><a href="logout.php">Logout</a></li>
+
+            </ul>
+        </div>
+    </nav>
 
 
-    <div class="row m-2">
-        <div class="card col-md-3 m-2">
-            <div class="card-body">
-                <div class="m-3 p-3">
-                    <img src="<?php echo $filepath?>" alt="Loading" height="150" width="150" class="rounded-circle">
 
-                </div>
+    <div class="card-body ">
+        <div class="m-3 p-3">
+            <img src="<?php echo $filepath?>" alt="Loading" height="150" width="150">
+
+        </div>
+    </div>
+    <div class="card col-md-6 m-2 bg-success text-white">
+        <div class="card-body">
+            <div>
+                <label class="form-label h6">FULL NAME</label>
+                <p><?php echo $fullname; ?></p>
             </div>
-            <div class="card col-md-6 m-2 bg-primary text-white">
-                <div class="card-body">
-                    <div>
-                        <label class="form-label h6">FULL NAME</label>
-                        <p><?php echo $fullname; ?></p>
-                    </div>
-                    <hr>
-                    <div>
-                        <label class="form-label h6">EMAIL</label>
-                        <p><?php echo $email; ?></p>
-                    </div>
-                    <hr>
-                    <div>
-                        <label class="form-label h6">Detail</label>
-                        <p><?php echo  $message; ?></p>
-                    </div>
+            <hr>
+            <div>
+                <label class="form-label h6">EMAIL</label>
+                <p><?php echo $email; ?></p>
+            </div>
+            <hr>
+            <div>
+                <label class="form-label h6">Detail</label>
+                <p><?php echo  $message; ?></p>
+            </div>
+
+            <div>
+                <div class="m-2 p-3">
+                    <a href="vieworder.php" class="btn btn-warning col-md-12"> BACK</a>
                 </div>
             </div>
         </div>
-        <?php
+    </div>
+
+    <?php
 
         } else {
             echo "No record was found";

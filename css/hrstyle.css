@@ -195,3 +195,9 @@ h1 {
 .card div button:hover {
     background: #00bfff;
 }
+
+.del {
+    align-items: center;
+    margin-top: 20%;
+    margin-left: 20%;
+}
