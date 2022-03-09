@@ -19,6 +19,7 @@
         <div class="loginDiv">
             <div class="col-6">
                 <form action="handlelogin.php" method="post">
+                    <h3>Login</h3>
                     <div class="row">
                         <div class="col-20">
                             <label>Username</label>

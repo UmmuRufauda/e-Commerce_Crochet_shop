@@ -18,6 +18,7 @@
 
     <div class="loginDiv">
         <form action="handleAcc.php" method="post">
+            <h3>Create an account Here</h3>
             <div class="row">
                 <div class="col-20">
                     <label>Email</label>
