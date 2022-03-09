@@ -41,19 +41,10 @@
             <form action="handlecontact.php" method="post">
                 <div class="row">
                     <div class="col-20">
-                        <label>First Name</label>
+                        <label>Full Name</label>
                     </div>
                     <div class="col-80">
-                        <input type="text" name="fname" placeholder="First Name">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-20">
-                        <label>Second Name</label>
-                    </div>
-                    <div class="col-80">
-                        <input type="text" name="sname" placeholder="Second Name">
+                        <input type="text" name="fname" placeholder="Full Name">
                     </div>
                 </div>
 
@@ -66,18 +57,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-20">
-                        <label for="myfile">Select files:</label>
+
+                    <div class="col-80">
+                        <input class="fileinput" type="file" id="myfile" name="myfile" multiple>
                     </div>
                     <div class="col-80">
-                        <input type="file" id="myfile" name="myfile" multiple>
-                    </div>
-                    <div class="col-80">
-                        <textarea type="text" name="textarea" placeholder="write Something Here...."
+                        <textarea type="text" name="message" placeholder="write Something Here...."
                             style="height: 150px;"></textarea>
                     </div>
                     <div>
-                        <button class="btnsubmit" type="submit">Submit</button>
+                        <input type="submit" value="Make Order" name="submit" class="btnsubmit">
                     </div>
                 </div>
 

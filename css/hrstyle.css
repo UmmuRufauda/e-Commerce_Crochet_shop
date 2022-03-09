@@ -1,6 +1,7 @@
 .styleul {
     list-style-type: none;
     margin: 0;
+    width: 100%;
     padding: 0;
     background-color: #333;
     overflow: hidden;
@@ -115,25 +116,35 @@ section {
     float: left;
 }
 
+.fileinput {
+    margin-top: 2px;
+    border: none;
+}
+
 input,
 textarea {
+    align-items: center;
     width: 60%;
     padding: 10px;
     border-radius: 6px;
+    padding-left: 10px;
     border: 1px solid black;
 }
 
 label {
+    align-items: center;
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
 
 .btnsubmit {
-    width: 35%;
+    width: 100px;
+    height: 50px;
     padding: 0px;
     background-color: burlywood;
     border: none;
     border-radius: 5px;
+    margin-top: 4px;
 }
 
 .btnsubmit:hover {
@@ -142,8 +153,8 @@ label {
 
 .avatar {
     border-radius: 50%;
-    width: 40%;
-    height: 40%;
+    width: 20%;
+    height: 20%;
 }
 
 h1 {
@@ -152,10 +163,11 @@ h1 {
 }
 
 .loginDiv {
+    align-content: center;
     margin-top: 10%;
     margin-left: 20%;
     align-self: center;
-    width: 70%;
+    width: 50%;
     border: 3px solid #73AD21;
 }
 

@@ -1,24 +1,22 @@
 <?php
+
 include "connect.php";
 
 if (isset($_POST['submit'])){
-    $firstname = $_POST['firstname'];
-    $secondname =$_POST['secondname'];
+    $fullname = $_POST['fname'];
     $email =$_POST['email'];
     $message =$_POST['message'];
 
 
     // photo
-    $photoname =$_FILES["photo"]["name"];
+    $photoname=$_FILES["photo"]["name"];
     $tempname=$_FILES["photo"]["tmp_name"];
     $folder= "uploads/".$photoname;
 
 
-
-
     //insert
-    $sql = "INSERT INTO `design`(`firstname`, `secondname`, `email`, `design`, `message`)
-    VALUES ('$firstname','$secondname','$email','$photoname','$message')";
+    $sql = "INSERT INTO `design`(`id`, `fullname`, `email`, `photo`, `message`)
+    VALUES ('$fullname','$email','$photoname','$message')";
 
 $result = mysqli_query($link,$sql);
 
@@ -40,7 +38,7 @@ $result = mysqli_query($link,$sql);
 
 }
 
-echo'<a class="btn btn-danger" href="index.php">BACK</a>';
+echo'<a class="btn btn-warning" href="index.php">Home</a>';
 
 
 ?>

@@ -26,6 +26,7 @@ if(isset($_POST['login'])){
                 // verify the password
                 if (password_verify($Accpassword,$password)){
 
+                    
                     header("location:index.php");
                     
                 }else{

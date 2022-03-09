@@ -15,9 +15,7 @@
 
 <body>
     <div class="container">
-        <div class="avatar">
-            <img src="images/ictsupport.png" alt="">
-        </div>
+
         <div class="loginDiv">
             <div class="col-6">
                 <form action="handlelogin.php" method="post">

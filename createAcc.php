@@ -14,61 +14,57 @@
 
 
 <body>
-    <div>
-        <div class="avatar">
-            <img src="images/ictsupport.png" alt="">
-        </div>
-        <div class="loginDiv">
-            <form action="handleAcc.php" method="post">
-                <div class="row">
-                    <div class="col-20">
-                        <label>Email</label>
-                    </div>
-                    <div class="col-80">
-                        <input type="email" name="email" placeholder="Email">
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-20">
-                        <label>Username</label>
-                    </div>
-                    <div class="col-80">
-                        <input type="text" name="username" placeholder="Username">
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-20">
-                        <label>Password</label>
-                    </div>
-                    <div class="col-80">
-                        <input type="password" name="password" placeholder="Password">
-                    </div>
+    <div class="loginDiv">
+        <form action="handleAcc.php" method="post">
+            <div class="row">
+                <div class="col-20">
+                    <label>Email</label>
                 </div>
-                <div class="row">
-                    <div class="col-20">
-                        <label>Confirm Password</label>
-                    </div>
-                    <div class="col-80">
-                        <input type="password" name="cpassword" placeholder="Confirm Password">
-                    </div>
+                <div class="col-80">
+                    <input type="email" name="email" placeholder="Email">
                 </div>
-                <div class="row">
-                    <div class="col-4">
-                        <input type="submit" value="Create" name="submit" class="btnsubmit">
-                    </div>
-                    <div class="col-4">
-                        <p>Have an Account</p><a href="account.php">Login</a>
-                    </div>
-                    <div class="col-4">
-                        <p>Need to See Designs</p><a href="index.php">Home</a>
-                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-20">
+                    <label>Username</label>
                 </div>
-            </form>
-        </div>
+                <div class="col-80">
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-20">
+                    <label>Password</label>
+                </div>
+                <div class="col-80">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-20">
+                    <label>Confirm Password</label>
+                </div>
+                <div class="col-80">
+                    <input type="password" name="cpassword" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <input type="submit" value="Create" name="submit" class="btnsubmit">
+                </div>
+                <div class="col-4">
+                    <p>Have an Account</p><a href="account.php">Login</a>
+                </div>
+                <div class="col-4">
+                    <p>Need to See Designs</p><a href="index.php">Home</a>
+                </div>
+            </div>
+        </form>
     </div>
-
 </body>
 
 </html>
