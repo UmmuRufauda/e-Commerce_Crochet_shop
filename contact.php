@@ -58,9 +58,9 @@
                 </div>
                 <div class="row">
 
-                    <div class="col-80">
+                    <!---<div class="col-80">
                         <input class="fileinput" type="file" id="myfile" name="myfile" multiple>
-                    </div>
+                    </div>-->
                     <div class="col-80">
                         <textarea type="text" name="message" placeholder="write Something Here...."
                             style="height: 150px;"></textarea>

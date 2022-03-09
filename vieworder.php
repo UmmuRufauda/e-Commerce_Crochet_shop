@@ -1,78 +1,79 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Order</title>
+    <link rel="stylesheet" href="css/hrstyle.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="row m-2 p-2">
+        <?php
 include "connect.php";
 
-if (isset($_GET["id"]) and !empty($_GET["id"])) {
+$sql = "SELECT * FROM `design`";
 
-    $id = $_GET["id"];
+$result = mysqli_query($link,$sql);
 
-    $sql = "SELECT * FROM `students` WHERE id=$id";
+if ($result){
 
-    $result = mysqli_query($link, $sql);
+    $data = mysqli_num_rows($result);
 
-    if ($result) {
+       if ($data>0){
 
-        $data = mysqli_num_rows($result);
+           echo "<table class='table table-striped table-hover'>";
+           echo "<tr>";
+           echo "<th>#</th>";
+           echo "<th>Full Name</th>";
+           echo "<th>Email Address</th>";
+            echo "<th>Message</th>";
+           echo "<th>Actions</th>";
+           echo "</tr>";
+           while ($row=mysqli_fetch_array($result)){
+               echo "<tr>";
+               echo "<td>".$row['id']."</td>" ;
+               echo "<td>".$row['fullname']."</td>" ;
+               echo "<td>".$row['email']."</td>" ;
+               echo "<td>".$row['message']."</td>" ;
+               echo " <td>
+                   
+                    <a class='m-2' href='delete.php?id=".$row['id']."'><span class='fa fa-trash'></span></a>
+                    <a class='m-2' href='update.php?id=".$row['id']."'><span class='fa fa-pencil'></span></a>
+                    <a class='m-2' href='view.php?id=".$row['id']."'><span class='fa fa-eye'></span></a>
+                    </td>";
 
-        if ($data == 1) {
+               echo "</tr>";
 
-            $row = mysqli_fetch_array($result);
-
-            $fullname = $row['fullname'];
-            $email= $row['email'];
-            $photo = $row['photo'];
-            $message = $row['message'];
-
-            $filepath = "uploads/$photo";
-
-            ?>
-<div class="row m-2">
-    <div class="card col-md-3 m-2">
-        <div class="card-body">
-            <div class="m-3 p-3">
-                <img src="<?php echo $filepath?>" alt="Loading" height="150" width="150">
-            </div>
-
-        </div>
-    </div>
-    <div class="card col-md-6 m-2 bg-primary text-white">
-        <div class="card-body">
-            <div>
-                <label class="form-label h6">FULL NAME</label>
-                <p><?php echo $fullname; ?></p>
-            </div>
-            <hr>
-
-            <div>
-                <label class="form-label h6">EMAIL ADDRESS</label>
-                <p><?php echo  $email; ?></p>
-            </div>
-            <div>
-                <label class="form-label h6">MESSAGE</label>
-                <p><?php echo $message;  ?></p>
-            </div>
-            <hr>
-
-        </div>
-    </div>
-</div>
-<?php
-        } else {
-            echo "No record was found";
-        }
+           }
 
 
-    } else {
-        echo "error executing query $sql" . mysqli_error($link);
-    }
+           echo "</table>";
 
 
-} else {
-    echo "id value not picked";
+
+
+       }else{
+           echo "<p class='alert alert-primary'>No Record was found in the database</p>";
+       }
+
+
+
+}else{
+    echo "Error executing query $sql".mysqli_error($link);
 }
 
-
-
-
-
 ?>
+    </div>
+
+</body>
+
+</html>

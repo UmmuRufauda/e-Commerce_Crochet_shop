@@ -9,14 +9,14 @@ if (isset($_POST['submit'])){
 
 
     // photo
-    $photoname=$_FILES["photo"]["name"];
-    $tempname=$_FILES["photo"]["tmp_name"];
-    $folder= "uploads/".$photoname;
+   // $pic=$_FILES["pic"]["name"];
+    //$tempname=$_FILES["pic"]["tmp_name"];
+    //$folder= "uploads/".$pic;
 
 
     //insert
-    $sql = "INSERT INTO `design`(`id`, `fullname`, `email`, `photo`, `message`)
-    VALUES ('$fullname','$email','$photoname','$message')";
+    $sql = "INSERT INTO `design`( `fullname`, `email`,`message`)
+    VALUES ('$fullname','$email','$message')";
 
 $result = mysqli_query($link,$sql);
 
