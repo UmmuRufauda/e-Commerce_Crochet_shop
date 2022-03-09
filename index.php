@@ -1,20 +1,3 @@
-<?php
-
-//session_start();
-
-
-//check if user has loged in ?
-//if(!isset($_SESSION['loggedin']) or $_SESSION['loggedin']!==true){
-    //header("Location:index.php");
-   // exit();
-//}
-
-
-include "connect.php";
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
