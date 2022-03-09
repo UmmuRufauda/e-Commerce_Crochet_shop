@@ -38,13 +38,13 @@
         </div>
 
         <div class="col-6">
-            <form action="handlecontact.php" method="post">
+            <form action="handlecontact.php" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-20">
                         <label>Full Name</label>
                     </div>
                     <div class="col-80">
-                        <input type="text" name="fname" placeholder="Full Name">
+                        <input type="text" name="fullname" placeholder="Full Name">
                     </div>
                 </div>
 
@@ -58,9 +58,9 @@
                 </div>
                 <div class="row">
 
-                    <!---<div class="col-80">
-                        <input class="fileinput" type="file" id="myfile" name="myfile" multiple>
-                    </div>-->
+                    <div class="col-80">
+                        <input class="fileinput" type="file" name="photo">
+                    </div>
                     <div class="col-80">
                         <textarea type="text" name="message" placeholder="write Something Here...."
                             style="height: 150px;"></textarea>

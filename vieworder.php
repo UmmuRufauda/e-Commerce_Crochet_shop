@@ -16,8 +16,26 @@
 
 <body>
 
-    <div class="row m-2 p-2">
-        <?php
+
+    <nav>
+        <div class="navbar">
+            <ul class="styleul">
+                <li><a href="index.php">Home </a></li>
+                <li><a href="about.php">About </a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="createAcc.php">Account</a></li>
+                <li><a href="vieworder.php">View Order</a></li>
+                <li><a href="logout.php">Logout</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+
+        <div class="row m-2 p-2">
+            <?php
 include "connect.php";
 
 $sql = "SELECT * FROM `design`";
@@ -47,8 +65,7 @@ if ($result){
                echo " <td>
                    
                     <a class='m-2' href='delete.php?id=".$row['id']."'><span class='fa fa-trash'></span></a>
-                    <a class='m-2' href='update.php?id=".$row['id']."'><span class='fa fa-pencil'></span></a>
-                    <a class='m-2' href='view.php?id=".$row['id']."'><span class='fa fa-eye'></span></a>
+                    <a class='m-2' href='singleOrder.php?id=".$row['id']."'><span class='fa fa-eye'></span></a>
                     </td>";
 
                echo "</tr>";
@@ -57,9 +74,6 @@ if ($result){
 
 
            echo "</table>";
-
-
-
 
        }else{
            echo "<p class='alert alert-primary'>No Record was found in the database</p>";
@@ -72,7 +86,10 @@ if ($result){
 }
 
 ?>
-    </div>
+        </div>
+
+    </section>
+
 
 </body>
 
