@@ -72,7 +72,7 @@ exit();
                         <label>Phone Number</label>
                     </div>
                     <div class="col-80">
-                        <input type="number" name="number" placeholder="Your Phone Number">
+                        <input class="inputstyle" type="tel" name="number" placeholder="+254 007089562">
                     </div>
                 </div>
                 <div class="row">

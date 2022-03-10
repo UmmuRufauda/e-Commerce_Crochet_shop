@@ -91,7 +91,7 @@ section {
 }
 
 .container {
-    background-color: bisque;
+    background-image: url("../images/t.jpg");
     padding: 30px;
     border-radius: 6px;
     align-items: center;

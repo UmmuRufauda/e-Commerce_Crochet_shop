@@ -64,10 +64,9 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
                 <li><a href="about.php">About </a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="adminAcc.php">Account</a></li>
                 <li><a href="vieworder.php">View Order</a></li>
                 <li><a href="singleOrder.php">Single Order</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="logoutAdm.php">Logout</a></li>
 
             </ul>
         </div>
@@ -77,11 +76,10 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
     <div class="logindiv">
         <div class="card-body ">
             <div class="m-3 p-3">
-                <img src="<?php echo $filepath?>" alt="Loading" height="150" width="150">
-
+                <img src="<?php echo $filepath?>" alt="Loading" height="200" width="200">
             </div>
         </div>
-        <div class="card col-md-6 m-2 bg-success text-white">
+        <div class="card col-md-6 m-2 bg-primary text-white">
             <div class="card-body">
                 <div>
                     <label class="form-label h6">FULL NAME</label>

@@ -31,7 +31,7 @@ exit();
     <nav>
         <div class="navbar">
             <ul class="styleul">
-                <li><a href="index.php">Home </a></li>
+                <li><a href="indexadmin.php">Home </a></li>
                 <li><a href="about.php">About </a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="vieworder.php">View Order</a></li>

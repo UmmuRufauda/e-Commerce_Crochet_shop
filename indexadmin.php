@@ -20,9 +20,8 @@
                 <li><a href="indexadmin.php">Home </a></li>
                 <li><a href="about.php">About </a></li>
                 <li><a href="products.php">Products</a></li>
-                <li><a href="admin.php">Contact</a></li>
-                <li><a href="adminAcc.php">Account</a></li>
                 <li><a href="vieworder.php">View Order</a></li>
+                <li><a href="adminAcc.php">Account</a></li>
                 <li><a href="logoutAdm.php">Logout</a></li>
 
             </ul>

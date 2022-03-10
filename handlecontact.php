@@ -21,8 +21,8 @@ if (isset($_POST["submit"])){
     
 
     // insert
-    $sql = "INSERT INTO `design`(`fullname`, `email`, `photo`, `message`)
-    VALUES ('$fullname','$email', '$photoname','$message') ";
+    $sql = "INSERT INTO `design`(`fullname`, `email`, `number`, `photo`, `message`)
+    VALUES ('$fullname','$email','$number', '$photoname','$message') ";
     
     $result = mysqli_query($link,$sql);
 
