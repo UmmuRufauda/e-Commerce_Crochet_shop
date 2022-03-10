@@ -1,5 +1,15 @@
 <?php
 
+
+session_start();
+
+// check if user has looged in?
+if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
+
+header("location:account.php");
+exit();
+}
+
 include "connect.php";
 
 if (isset($_GET["id"]) and !empty($_GET["id"])) {
@@ -64,36 +74,41 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
     </nav>
 
 
+    <div class="logindiv">
+        <div class="card-body ">
+            <div class="m-3 p-3">
+                <img src="<?php echo $filepath?>" alt="Loading" height="150" width="150">
 
-    <div class="card-body ">
-        <div class="m-3 p-3">
-            <img src="<?php echo $filepath?>" alt="Loading" height="150" width="150">
-
+            </div>
         </div>
-    </div>
-    <div class="card col-md-6 m-2 bg-success text-white">
-        <div class="card-body">
-            <div>
-                <label class="form-label h6">FULL NAME</label>
-                <p><?php echo $fullname; ?></p>
-            </div>
-            <hr>
-            <div>
-                <label class="form-label h6">EMAIL</label>
-                <p><?php echo $email; ?></p>
-            </div>
-            <hr>
-            <div>
-                <label class="form-label h6">Detail</label>
-                <p><?php echo  $message; ?></p>
-            </div>
+        <div class="card col-md-6 m-2 bg-success text-white">
+            <div class="card-body">
+                <div>
+                    <label class="form-label h6">FULL NAME</label>
+                    <p><?php echo $fullname; ?></p>
+                </div>
+                <hr>
+                <div>
+                    <label class="form-label h6">EMAIL</label>
+                    <p><?php echo $email; ?></p>
+                </div>
+                <hr>
+                <div>
+                    <label class="form-label h6">Detail</label>
+                    <p><?php echo  $message; ?></p>
+                </div>
 
-            <div>
-                <div class="m-2 p-3">
-                    <a href="vieworder.php" class="btn btn-warning col-md-12"> BACK</a>
+                <div>
+                    <div class="m-2 p-3">
+                        <a href="vieworder.php" class="btn btn-warning col-md-12"> BACK</a>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
     </div>
 
     <?php

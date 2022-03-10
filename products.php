@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// check if user has looged in?
+if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
+
+header("location:account.php");
+exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,8 +50,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Side Bag</h4>
                         <p class="card-text">Price ksh. 550</p>
-                        <button><i class="fa fa-shopping-cart"></i>order</button>
-
+                        <button><a href="contact.php"><i class="fa fa-shopping-cart">order</i></a></button>
                     </div>
                 </div>
             </div>
@@ -52,7 +61,7 @@
                     <div class="card-body">
                         <h4 class="card-title">baby turban and shoes</h4>
                         <p class="card-text">Price ksh. 600</p>
-                        <button><i class="fa fa-shopping-cart"></i>order</button>
+                        <button><a href="contact.php"><i class="fa fa-shopping-cart">order</i></a></button>
                     </div>
                 </div>
             </div>
@@ -62,7 +71,7 @@
                     <div class="card-body">
                         <h4 class="card-title">baby shoes</h4>
                         <p class="card-text">Price ksh. 300</p>
-                        <button><i class="fa fa-shopping-cart"></i>order</button>
+                        <button><a href="contact.php"><i class="fa fa-shopping-cart">order</i></a></button>
                     </div>
                 </div>
             </div>
@@ -76,7 +85,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Pencil porch</h4>
                         <p class="card-text">Price ksh. 350</p>
-                        <button><i class="fa fa-shopping-cart"></i>order</button>
+                        <button><a href="contact.php"><i class="fa fa-shopping-cart">order</i></a></button>
                     </div>
                 </div>
             </div>
@@ -87,7 +96,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Parse</h4>
                         <p class="card-text">Price ksh. 200</p>
-                        <button><i class="fa fa-shopping-cart"></i>order</button>
+                        <button><a href="contact.php"><i class="fa fa-shopping-cart">order</i></a></button>
                     </div>
                 </div>
             </div>
@@ -97,7 +106,7 @@
                     <div class="card-body">
                         <h4 class="card-title">baby dress and turban</h4>
                         <p class="card-text">Price ksh. 700</p>
-                        <button><i class="fa fa-shopping-cart"></i>order</button>
+                        <button><a href="contact.php"><i class="fa fa-shopping-cart">order</i></a></button>
                     </div>
                 </div>
             </div>
