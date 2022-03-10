@@ -1,6 +1,8 @@
 <?php
 include "connect.php";
-//session_start();
+
+session_start();
+
 if(isset($_POST['login'])){
     $Accusername = $_POST['username'];
     $Accpassword = $_POST['password'];
@@ -25,7 +27,26 @@ if(isset($_POST['login'])){
                 
                 // verify the password
                 if (password_verify($Accpassword,$password)){
+                     if($row["usertype"]=='nuser'){
+                         
+                    $_SESSION["loggedin"]=true;
+                    $_SESSION["id"] = $id;
+                    $_SESSION["username"]=$username;
+                    $_SESSION["usertype"]=$user_type;
 
+
+                    header("location:index.php");
+
+                    }elseif($row["usertype"]=="admin"){
+                    $_SESSION["loggedin"]=true;
+                    $_SESSION["id"] = $id;
+                    $_SESSION["username"]=$username;
+                    $_SESSION["usertype"]=$user_type;
+
+                    header("location:indexadmin.php");
+                    }else{
+                        echo "please ask admin o assign you a usertype";
+                    }
                     
                     header("location:index.php");
                     

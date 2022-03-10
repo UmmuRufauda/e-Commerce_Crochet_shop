@@ -1,5 +1,16 @@
 <?php
 
+
+session_start();
+
+//check if user has looged in?
+if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
+
+   header("location:contact.php");
+   
+   exit();
+}
+
 include "connect.php";
 
 if (isset($_POST["submit"])){
