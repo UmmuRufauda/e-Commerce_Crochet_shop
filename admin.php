@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Admin Login</title>
     <link rel="stylesheet" href="css/hrstyle.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
 
                         </div>
                         <div class="col-4">
-                            <a href="adminAcc.php">Dont have an Account</a>
+                            <a href="createAcc.php">Dont have an Account</a>
 
 
                         </div>

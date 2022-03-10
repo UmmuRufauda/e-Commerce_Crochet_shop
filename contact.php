@@ -68,6 +68,14 @@ exit();
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-20">
+                        <label>Phone Number</label>
+                    </div>
+                    <div class="col-80">
+                        <input type="number" name="number" placeholder="Your Phone Number">
+                    </div>
+                </div>
+                <div class="row">
 
                     <div class="col-80">
                         <input class="fileinput" type="file" name="photo">

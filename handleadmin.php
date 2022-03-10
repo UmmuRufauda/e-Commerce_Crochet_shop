@@ -31,6 +31,28 @@ if(isset($_POST['login'])){
                 // verify the password
                 if (password_verify($Accpassword,$password)){
                      
+                 if($row["usertype"]==1){
+                         
+                    $_SESSION["loggedin"]=true;
+                    $_SESSION["id"] = $id;
+                    $_SESSION["username"]=$username;
+                    
+
+
+                    header("location:indexadmin.php");
+
+                    }elseif($row["usertype"]==0){
+                    $_SESSION["loggedin"]=true;
+                    $_SESSION["id"] = $id;
+                    $_SESSION["username"]=$username;
+                    
+
+                    header("location:index.php");
+                    }else{
+                        echo "please ask admin to assign you a usertype";
+                    }
+                    
+                    header("location:indexadmin.php");
                     
                 }else{
                     echo "Passwords are not matching";
@@ -40,5 +62,5 @@ if(isset($_POST['login'])){
             echo "No such email address found";
         }
     }
-    }
+}
 ?>

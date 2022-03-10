@@ -9,7 +9,9 @@ if (isset($_POST["submit"])){
 
     $fullname = $_POST["fullname"];
     $email = $_POST["email"];
+    $number = $_POST["number"];
    $message = $_POST["message"];
+   
    
     // files
     $photoname =$_FILES["photo"]["name"];

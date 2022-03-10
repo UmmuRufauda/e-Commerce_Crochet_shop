@@ -35,9 +35,9 @@ exit();
                 <li><a href="about.php">About </a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="createAcc.php">Account</a></li>
+                <li><a href="admin.php">Admin</a></li>
                 <li><a href="vieworder.php">View Order</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="logoutAdm.php">Logout</a></li>
 
             </ul>
         </div>
