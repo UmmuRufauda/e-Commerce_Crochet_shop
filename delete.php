@@ -7,7 +7,7 @@ session_start();
 // check if user has looged in?
 if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
 
-   header("location:account.php");
+   header("location:admin.php");
    exit();
 }
 

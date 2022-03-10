@@ -21,8 +21,10 @@
                 <li><a href="about.php">About </a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="createAcc.php">Account</a></li>
+                <li><a href="createAcc.php">My Account</a></li>
                 <li><a href="logout.php">Logout</a></li>
+
+                <li class="adminindex.php"><a href="admin.php">Admin</a></li>
 
             </ul>
         </div>

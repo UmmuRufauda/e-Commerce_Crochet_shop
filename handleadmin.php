@@ -6,11 +6,11 @@ session_start();
 if(isset($_POST['login'])){
     $Accusername = $_POST['username'];
     $Accpassword = $_POST['password'];
-    $usertype = $_POST['usertype'];
+   
 
 
     //compare
-    $sql_query = "SELECT * FROM `useracc` WHERE username='$Accusername' and usertype='$usertype'";
+    $sql_query = "SELECT * FROM `admin` WHERE username='$Accusername'";
     $result = mysqli_query($link, $sql_query);
 
     if($result){
@@ -30,28 +30,7 @@ if(isset($_POST['login'])){
                 
                 // verify the password
                 if (password_verify($Accpassword,$password)){
-                     if($row["usertype"]==1){
-                         
-                    $_SESSION["loggedin"]=true;
-                    $_SESSION["id"] = $id;
-                    $_SESSION["username"]=$username;
-                    
-
-
-                    header("location:indexadmin.php");
-
-                    }elseif($row["usertype"]==0){
-                    $_SESSION["loggedin"]=true;
-                    $_SESSION["id"] = $id;
-                    $_SESSION["username"]=$username;
-                    
-
-                    header("location:index.php");
-                    }else{
-                        echo "please ask admin to assign you a usertype";
-                    }
-                    
-                    header("location:index.php");
+                     
                     
                 }else{
                     echo "Passwords are not matching";

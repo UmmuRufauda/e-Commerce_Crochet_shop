@@ -21,7 +21,7 @@
                 <li><a href="about.php">About </a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="account.php">Account</a></li>
+                <li><a href="createAcc.php">My Account</a></li>
                 <li><a href="logout.php">Logout</a></li>
 
             </ul>

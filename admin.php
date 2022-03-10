@@ -18,7 +18,7 @@
 
         <div class="loginDiv">
             <div class="col-6">
-                <form action="handlelogin.php" method="post">
+                <form action="handleadmin.php" method="post">
                     <h3>Login</h3>
                     <div class="row">
                         <div class="col-20">
@@ -46,7 +46,7 @@
 
                         </div>
                         <div class="col-4">
-                            <a href="createAcc.php">Dont have an Account</a>
+                            <a href="adminAcc.php">Dont have an Account</a>
 
 
                         </div>

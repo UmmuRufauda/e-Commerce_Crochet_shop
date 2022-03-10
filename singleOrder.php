@@ -6,7 +6,7 @@ session_start();
 // check if user has looged in?
 if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true ){
 
-header("location:account.php");
+header("location:admin.php");
 exit();
 }
 
@@ -64,7 +64,7 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
                 <li><a href="about.php">About </a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="createAcc.php">Account</a></li>
+                <li><a href="adminAcc.php">Account</a></li>
                 <li><a href="vieworder.php">View Order</a></li>
                 <li><a href="singleOrder.php">Single Order</a></li>
                 <li><a href="logout.php">Logout</a></li>
